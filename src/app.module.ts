@@ -7,6 +7,7 @@ import { ProductModule } from './product/product.module';
 import { ReviewModule } from './review/review.module';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypegooseModule } from 'nestjs-typegoose';
+import { getMongoConfig } from './configs/mongo.config';
 
 @Module({
 	imports: [
@@ -14,9 +15,7 @@ import { TypegooseModule } from 'nestjs-typegoose';
 		TypegooseModule.forRootAsync({
 			imports: [ConfigModule],
 			inject: [ConfigService],
-			useFactory: args => {
-
-			}
+			useFactory: getMongoConfig
 		}),
         AuthModule,
 		TopPageModule,
