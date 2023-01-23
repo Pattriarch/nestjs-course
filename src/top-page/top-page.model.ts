@@ -1,4 +1,4 @@
-import { ProductModel } from '../../product/product.model/product.model';
+import { ProductModel } from '../product/product.model';
 import { Base } from '@typegoose/typegoose/lib/defaultClasses';
 import { prop } from '@typegoose/typegoose';
 
@@ -25,10 +25,10 @@ export class HhData {
 
 export class TopPageAdvantage {
 	@prop()
-	title: string
+	title: string;
 
 	@prop()
-	description: string
+	description: string;
 }
 
 export interface TopPageModel extends Base {}

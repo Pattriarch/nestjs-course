@@ -9,7 +9,7 @@ describe('ReviewService', () => {
 	const exec = { exec: jest.fn() };
 	const reviewRepositoryFactory = () => ({
 		find: () => exec
-	})
+	});
 
 	beforeEach(async () => {
 		const module: TestingModule = await Test.createTestingModule({
